@@ -5,9 +5,11 @@ import App from "../App";
 export default function Router() {
   return (
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/invoices" element={<Invoices />} />
-      <Route path="/expenses" element={<Expenses />} />
+      <Route path="/" element={<App />}>
+        <Route path="/invoices" element={<Invoices />} />
+        <Route path="/expenses" element={<Expenses />} />
+        {/* how about shared layout with header and footer */}
+      </Route>
     </Routes>
   )
 }

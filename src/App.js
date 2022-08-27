@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function App() {
 
@@ -10,6 +10,7 @@ function App() {
         &nbsp; | &nbsp;
         <Link to="/expenses">Expenses</Link>
       </nav>
+      <Outlet />
     </main>
   );
 }
