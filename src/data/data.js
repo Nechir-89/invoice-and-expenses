@@ -36,5 +36,5 @@ export function getAllInvoices() {
 }
 
 export function getInvoice(number) {
-  return invoices.filter(invoice => invoice.number === number);
+  return invoices.find(invoice => invoice.number === number);
 }
