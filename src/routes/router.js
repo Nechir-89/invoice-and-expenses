@@ -10,6 +10,7 @@ export default function Router() {
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="/invoices" element={<Invoices />}>
+          <Route index element={<section>Please select an invoice!</section>} />
           <Route path=":invoiceId" element={<Invoice />} />
         </Route>
         <Route path="/expenses" element={<Expenses />} />
