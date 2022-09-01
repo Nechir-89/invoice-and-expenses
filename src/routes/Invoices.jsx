@@ -25,8 +25,11 @@ export default function Invoices() {
         <ol>
           {
             getAllInvoices().filter(invoice => {
-              let queryParam = searchParam.get("invoice").toLowerCase();
-              return invoice.name.toLowerCase().includes(queryParam);
+              let queryParam = searchParam.get("invoice");
+              if (queryParam)
+                return invoice.name.toLowerCase().includes(queryParam.toLowerCase());
+
+              return true;
             }).map(invoice =>
               <li key={invoice.number}>
                 <NavLink
